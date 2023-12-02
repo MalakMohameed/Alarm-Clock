@@ -24,8 +24,8 @@ void ActivatableClock::setRingtone(std::string ringtonePath)
 void ActivatableClock::activateRingtone()
 {
 	if (!ringtoneActive) {
-		std::cout << "---->Playing\n";
 		ringtone.play();
+		std::cout << "---->Playing\n";
 		ringtoneActive = true;
 	}
 }
@@ -56,10 +56,10 @@ std::tm ActivatableClock::getUserTime_tm()
 	return userTime_tm;
 }
 
-bool ActivatableClock::isTimeToRing()
+bool ActivatableClock::isTimeToRing() ////OverLoad Function to ignore seconds 
 {
 	
-	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min)
+	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min && getUserTime_tm().tm_sec >= getSystemTime_tm().tm_sec)
 	{
 		//if (!ringtoneActive) activateRingtone();
 		return true;

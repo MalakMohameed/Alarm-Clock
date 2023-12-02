@@ -6,7 +6,7 @@
 
 class ActivatableClock :public ClockModule
 {
-private: 
+protected: 
 	short setHours, setMinutes, setSeconds;
 	std::string ClockLabel = "";
 	std::tm userTime_tm = {};
@@ -16,7 +16,7 @@ private:
 
 public:
 	ActivatableClock();
-	void setRingtone(std::string ringtonePath);
+	void setRingtone(std::string ringtonePath = "./Ringtones/Radar.ogg");
 	void activateRingtone();
 	void stopRingtone();
 	void setAlarmTime(short HH, short MM, short SS = 0);
