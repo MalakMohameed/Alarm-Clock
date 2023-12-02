@@ -23,10 +23,11 @@ void ActivatableClock::setRingtone(std::string ringtonePath)
 
 void ActivatableClock::activateRingtone()
 {
-	
-	std::cout << "---->Playing\n";
-	ringtone.play();
-	ringtoneActive = true;
+	if (!ringtoneActive) {
+		std::cout << "---->Playing\n";
+		ringtone.play();
+		ringtoneActive = true;
+	}
 }
 
 void ActivatableClock::stopRingtone()
@@ -41,6 +42,7 @@ void ActivatableClock::setAlarmTime(short HH, short MM, short SS)
 	userTime_tm.tm_hour = HH;
 	userTime_tm.tm_min = MM;
 	userTime_tm.tm_sec = SS;
+	
 }
 
 std::chrono::system_clock::time_point ActivatableClock::getUserTimePoint()
@@ -52,6 +54,28 @@ std::chrono::system_clock::time_point ActivatableClock::getUserTimePoint()
 std::tm ActivatableClock::getUserTime_tm()
 {
 	return userTime_tm;
+}
+
+bool ActivatableClock::isTimeToRing()
+{
+	
+	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min)
+	{
+		//if (!ringtoneActive) activateRingtone();
+		return true;
+
+		
+	}
+	else if (getUserTime_tm().tm_hour <= getSystemTime_tm().tm_hour && getUserTime_tm().tm_min <= getSystemTime_tm().tm_min)
+	{
+		
+		//if (ringtoneActive) stopRingtone();
+		return false;
+
+	}
+	return false;
+
+
 }
 
 
