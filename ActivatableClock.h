@@ -23,6 +23,7 @@ public:
 	std::chrono::system_clock::time_point getUserTimePoint();
 	std::tm getUserTime_tm();
 	bool ringtoneActive = false; 
+	bool isTimeToRing();
 
 };
 
