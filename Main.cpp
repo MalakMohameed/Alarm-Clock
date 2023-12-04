@@ -3,6 +3,8 @@
 #include <iomanip>
 #include <SFML/System.hpp>
 
+
+
 #include "ClockModule.h"
 #include "ActivatableClock.h"
 #include "AlarmClock.h"
@@ -10,7 +12,7 @@
 
 ////Alarm Now Almost Fully Functional minus the need to overload the function isTimeToTing() not to check seconds.
 ///Timer needs to be fixed as the ringtone only plays if the userTime_tm is the exact same as the systemTime_tm sec by sec,
-///Which makes it ring for just a sec and then nothing 
+///Which makes it ring for just a sec and then nothing	
 
 
 
