@@ -8,14 +8,17 @@ class ActivatableClock :public ClockModule
 {
 protected: 
 	short setHours, setMinutes, setSeconds;
-	std::string ClockLabel = "";
+	std::string ClockLabel = "a";
 	std::tm userTime_tm = {};
-	sf::Music ringtone;
+	sf::SoundBuffer ringtoneBuffer;
+	sf::Sound ringtone;
+	long ClockLabelAsLong();
 	
 	
 
 public:
 	ActivatableClock();
+	ActivatableClock(ActivatableClock &copyClock);
 	void setRingtone(std::string ringtonePath = "./Ringtones/Radar.ogg");
 	void activateRingtone();
 	void stopRingtone();
@@ -24,6 +27,8 @@ public:
 	std::tm getUserTime_tm();
 	bool ringtoneActive = false; 
 	bool isTimeToRing();
+
+	long hash();
 
 };
 

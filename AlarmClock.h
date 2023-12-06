@@ -17,6 +17,7 @@ public:
 	std::vector<int> getDaysToRing();
 	bool isTodayOnList();
 	bool isTimeToRing();
+	
 
 };
 
