@@ -13,13 +13,14 @@ protected:
 	sf::SoundBuffer ringtoneBuffer;
 	sf::Sound ringtone;
 	long ClockLabelAsLong();
+
 	
 	
 
 public:
 	ActivatableClock();
 	ActivatableClock(ActivatableClock &copyClock);
-	void setRingtone(std::string ringtonePath = "./Ringtones/Radar.ogg");
+	void setRingtone(std::string ringtonePath);
 	void activateRingtone();
 	void stopRingtone();
 	void setAlarmTime(short HH, short MM, short SS = 0);
@@ -27,8 +28,10 @@ public:
 	std::tm getUserTime_tm();
 	bool ringtoneActive = false; 
 	bool isTimeToRing();
-
 	long hash();
+
+
+	
 
 };
 

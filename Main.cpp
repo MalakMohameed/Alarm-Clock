@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <SFML/System.hpp>
+#include <SFML/System.hpp>
 
 
 #include "ClockModule.h"
@@ -13,16 +14,51 @@
 ////Alarm Now Almost Fully Functional minus the need to overload the function isTimeToTing() not to check seconds.
 ///Timer needs to be fixed as the ringtone only plays if the userTime_tm is the exact same as the systemTime_tm sec by sec,
 ///Which makes it ring for just a sec and then nothing.	
+/// 
+/// 
+
+void checkForAlarms(HashAlarm clocks)
+{
+	while (true)
+	{
+
+		for (int i = 0; i < clocks.getCapacity(); i++)
+		{
+			//std::cout << i << clocks.getElementIterator(i).clock.hash() << '\n';
+			//std::cout << clocks.getElementIterator(i).status << "\n---------------";
+			//if(clocks.getElementIterator(i).clock.hash() != -26216) std::cout << "************\n----------\n";
+
+			if (clocks.getElementIterator(i).clock.isTimeToRing() && clocks.getElementIterator(i).isPlaying != true)
+			{
+				clocks.getElementIterator(i).clock.activateRingtone();
+				std::cout << i << "Supposed To Ring\n";
+				clocks.getElementIterator(i).setisPlaying(false);
+				//continue;
+			}
+			else {
+				clocks.getElementIterator(i).clock.stopRingtone();
+				clocks.getElementIterator(i).setisPlaying(false);
+		}
+		}
+		
+
+	}
+	
+
+}
 
 int main()
 {
+	HashAlarm ClockStorage;
+	
+	//clockLogicThread.launch();
 	AlarmClock clock;
-	TimerClock timer;
-	HashAlarm hashTable;
+    TimerClock timer ;
+	
 	
 	std::cout << clock.getSystemTime_tm().tm_hour<< ":" << clock.getSystemTime_tm().tm_min << ":" << clock.getSystemTime_tm().tm_sec << std::endl;  ///%12 to convert to 12H instead of 24H
 	
-	clock.setRingtone("./Ringtones/Radar.ogg");
+	clock.setRingtone("./Ringtones/goofy1.ogg");
 	//timer.setRingtone();
 
 	clock.setAlarmTime(20, 04,0);
@@ -33,13 +69,13 @@ int main()
 //	clock.activateRingtone();	
 //	timer.activateRingtone();
 
-	hashTable.insertQuadratic(clock.hash(), clock);
-	hashTable.insertQuadratic(timer.hash(), timer);
-	std::cout << hashTable.numberOfAlarms() << '\n';
+	ClockStorage.insertQuadratic(clock.hash(), clock);
+	//hashTable.insertQuadratic(timer.hash(), timer);
+	std::cout << ClockStorage.numberOfAlarms() << '\n';
 
 	
-		AlarmClock clock;
-		TimerClock timer;
+	    //AlarmClock clock;
+		//TimerClock timer;
 		int hours = 0;
 		int min = 0;
 		int sec = 0;
@@ -65,33 +101,31 @@ int main()
 			std::cout << "Enter hours then minutes then seconds\n";
 			std::cin >> hours >> min >> sec;
 			clock.setAlarmTime(hours, min, sec);
+			break;
 
 		case 2:
-			std::cout << "Enter hours then minutes then seconds\n";
+			std::cout << "Enter hours then minutes then seconds For Timer\n";
 			std::cin >> hours >> min >> sec;
 			timer.setTimer(hours, min, sec);
-
+			break;
 		}
 		//timer.setRingtone();
 
 		//clock.setAlarmTime(22, 20,0);
 		//clock.setDaysToRing({ 6 });
 
-		timer.setTimer(00, 00, 05);
+		//timer.setTimer(00, 00, 05);
 		std::cout << timer.getUserTime_tm().tm_hour << ":" << timer.getUserTime_tm().tm_min << ":" << timer.getUserTime_tm().tm_sec << "\n";
 		//clock.activateRingtone();
-		timer.activateRingtone();
-		while (true)
-		{
-			if (timer.isTimeToRing())
-			{
-				timer.activateRingtone();
-			}
-			else timer.stopRingtone();
-
-		}
+		ClockStorage.insertQuadratic(clock.hash()%ClockStorage.getCapacity(), clock);
+		//timer.activateRingtone();
+		 ///While Checing Condition Was Here<----
+		sf::Thread clockLogicThread(checkForAlarms, ClockStorage);
+		clockLogicThread.launch();
+		//checkForAlarms(ClockStorage);
 
 	}
+
 
 	
 

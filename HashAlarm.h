@@ -14,6 +14,10 @@ private:
 		
 		short status = -1;
 		ActivatableClock clock;
+		bool isPlaying = false;
+		void setisPlaying(bool setValue) {
+			isPlaying = setValue;
+		}
 		Unit();
 		Unit(int k , ActivatableClock& loadedClock)
 		{
@@ -26,16 +30,18 @@ private:
 
 	 
 	Unit table[HASH_TABLE_SIZE];
-
+	
 
 public:
-	 int id;
+
+	int id;
 
 	HashAlarm();
 	void insertQuadratic(long index, ActivatableClock alarm);
 	void removeQuadratic(long index, ActivatableClock alarm);
-
+	Unit getElementIterator(int index);
 	int numberOfAlarms();
+	short getCapacity();
 	
 
 };

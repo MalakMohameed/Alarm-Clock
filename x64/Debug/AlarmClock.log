@@ -1,15 +1,7 @@
-﻿  ActivatableClock.cpp
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\ActivatableClock.cpp(106,106): error C2440: 'static_cast': cannot convert from 'std::string' to 'int'
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\ActivatableClock.cpp(106,79): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-  AlarmClock.cpp
-  HashAlarm.cpp
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(15,25): warning C4244: '=': conversion from 'long' to 'short', possible loss of data
-  Main.cpp
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(41,14): error C2086: 'AlarmClock clock': redefinition
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(19): message : see declaration of 'clock'
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(42,14): error C2086: 'TimerClock timer': redefinition
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(20): message : see declaration of 'timer'
-  TimerClock.cpp
-  Generating Code...
+﻿  Main.cpp
+C:\DanielWorkCS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Main.cpp')
+  
+  AlarmClock.vcxproj -> C:\DanielWorkCS\AlarmClock\x64\Debug\AlarmClock.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

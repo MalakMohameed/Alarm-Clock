@@ -3,6 +3,7 @@
 
 long ActivatableClock::ClockLabelAsLong()
 {
+	return 1;
 	for (char c : ClockLabel)
 	{
 
@@ -33,7 +34,7 @@ ActivatableClock::ActivatableClock(ActivatableClock& copyClock)
 void ActivatableClock::setRingtone(std::string ringtonePath)
 {
 	///Error Hndle
-	
+	std::cout << ringtonePath << '\n';
 	if (!ringtoneBuffer.loadFromFile(ringtonePath))
 	{
 		cerr << "Error!!!" << ringtonePath << "\n";
@@ -76,13 +77,14 @@ std::chrono::system_clock::time_point ActivatableClock::getUserTimePoint()
 
 std::tm ActivatableClock::getUserTime_tm()
 {
+	
 	return userTime_tm;
 }
 
 bool ActivatableClock::isTimeToRing() ////OverLoad Function to ignore seconds 
 {
 	
-	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min && getUserTime_tm().tm_sec >= getSystemTime_tm().tm_sec)
+	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min /*&& getUserTime_tm().tm_sec >= getSystemTime_tm().tm_sec*/)
 	{
 		//if (!ringtoneActive) activateRingtone();
 		return true;
@@ -103,7 +105,7 @@ bool ActivatableClock::isTimeToRing() ////OverLoad Function to ignore seconds
 
 long ActivatableClock::hash()
 {
-	return (long)ringtone.getPitch()* userTime_tm.tm_hour + userTime_tm.tm_min * static_cast<int>(ClockLabel);
+	return (long)ringtone.getPitch() * (long)userTime_tm.tm_hour + (long)userTime_tm.tm_min /** stoll(ClockLabel)*/;
 }
 
 
