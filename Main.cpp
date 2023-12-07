@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <SFML/System.hpp>
-#include <SFML/System.hpp>
+#include <thread>
 
 
 #include "ClockModule.h"
@@ -17,33 +17,33 @@
 /// 
 /// 
 
-void checkForAlarms(HashAlarm clocks)
+void checkForAlarms(HashAlarm &clocks)
 {
-	while (true)
-	{
-
+	while(true) {
 		for (int i = 0; i < clocks.getCapacity(); i++)
 		{
-			//std::cout << i << clocks.getElementIterator(i).clock.hash() << '\n';
-			//std::cout << clocks.getElementIterator(i).status << "\n---------------";
-			//if(clocks.getElementIterator(i).clock.hash() != -26216) std::cout << "************\n----------\n";
-
-			if (clocks.getElementIterator(i).clock.isTimeToRing() && clocks.getElementIterator(i).isPlaying != true)
+			if (clocks.getElementIterator(i).clock.getringtoneActive()) std::cout << "Supposed to play but already playing\n" << clocks.getElementIterator(i).clock.getringtoneActive() << '\n';
+			if (clocks.getElementIterator(i).clock.isTimeToRing() && !clocks.getElementIterator(i).clock.getringtoneActive())
 			{
+				
+				std::cout << "--->" << clocks.getElementIterator(i).clock.getringtoneActive() << '\n';
+
 				clocks.getElementIterator(i).clock.activateRingtone();
-				std::cout << i << "Supposed To Ring\n";
-				clocks.getElementIterator(i).setisPlaying(false);
-				//continue;
+				std::cout << i << " Ringing \n";
+				clocks.getElementIterator(i).setisPlaying(true);
+				clocks.getElementIterator(i).clock.setringtoneActive(true);
+				std::cout << "--->" << clocks.getElementIterator(i).clock.getringtoneActive() << '\n';
+
+
 			}
 			else {
-				clocks.getElementIterator(i).clock.stopRingtone();
-				clocks.getElementIterator(i).setisPlaying(false);
+				std::cout << i << "NOT Supposed To Ring\n";
+				//clocks.getElementIterator(i).clock.stopRingtone();
+				std::cout << i << "NOT Ringing\n";
+				//	clocks.getElementIterator(i).clock.setringtoneActive(false);
+			}
 		}
-		}
-		
-
 	}
-	
 
 }
 
@@ -61,10 +61,10 @@ int main()
 	clock.setRingtone("./Ringtones/goofy1.ogg");
 	//timer.setRingtone();
 
-	clock.setAlarmTime(20, 04,0);
-	clock.setDaysToRing({ 2 });
+	//clock.setAlarmTime(20, 04,0);
+	//clock.setDaysToRing({ 2 });
 
-	timer.setTimer(00, 00, 05);
+	//timer.setTimer(00, 00, 05);
 	std::cout << timer.getUserTime_tm().tm_hour << ":" << timer.getUserTime_tm().tm_min << ":" << timer.getUserTime_tm().tm_sec << "\n";
 //	clock.activateRingtone();	
 //	timer.activateRingtone();
@@ -120,9 +120,13 @@ int main()
 		ClockStorage.insertQuadratic(clock.hash()%ClockStorage.getCapacity(), clock);
 		//timer.activateRingtone();
 		 ///While Checing Condition Was Here<----
-		sf::Thread clockLogicThread(checkForAlarms, ClockStorage);
-		clockLogicThread.launch();
+		//sf::Thread clockLogicThread(checkForAlarms, ClockStorage);
+		//////std::thread stdClockLogicThread(checkForAlarms, std::ref(ClockStorage));
+		checkForAlarms(ClockStorage);
+		
+		//clockLogicThread.launch();
 		//checkForAlarms(ClockStorage);
+		///////stdClockLogicThread.join();
 
 	}
 

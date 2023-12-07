@@ -7,7 +7,7 @@ HashAlarm::HashAlarm()
 	std::cout << "HashMap Creater\n";
 }
 
-void HashAlarm::insertQuadratic(long index, ActivatableClock alarm)
+void HashAlarm::insertQuadratic(long index, ActivatableClock &alarm)
 {
 	if (table[index].status == -1 || -2)
 	{

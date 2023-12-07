@@ -87,6 +87,7 @@ bool ActivatableClock::isTimeToRing() ////OverLoad Function to ignore seconds
 	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min /*&& getUserTime_tm().tm_sec >= getSystemTime_tm().tm_sec*/)
 	{
 		//if (!ringtoneActive) activateRingtone();
+		//std::cout << "isTimeToRing() returns true\n";
 		return true;
 
 		
@@ -95,6 +96,7 @@ bool ActivatableClock::isTimeToRing() ////OverLoad Function to ignore seconds
 	{
 		
 		//if (ringtoneActive) stopRingtone();
+		//std::cout << "isTimeToRing() returns false\n";
 		return false;
 
 	}
@@ -106,6 +108,19 @@ bool ActivatableClock::isTimeToRing() ////OverLoad Function to ignore seconds
 long ActivatableClock::hash()
 {
 	return (long)ringtone.getPitch() * (long)userTime_tm.tm_hour + (long)userTime_tm.tm_min /** stoll(ClockLabel)*/;
+}
+
+bool ActivatableClock::getringtoneActive()
+{
+	//std::cout << "getRingtoneActive() Called!\nringtoneActive Value: " << ringtoneActive << '\n';
+	return this->ringtoneActive;
+}
+
+void ActivatableClock::setringtoneActive(bool flagValue)
+{
+	std::cout << "setRingtoneActive() Called!\nFlag Value: " <<flagValue << '\n';
+	this->ringtoneActive = flagValue;
+	std::cout << "RingtoneActive Value: " << ringtoneActive << '\n';
 }
 
 
