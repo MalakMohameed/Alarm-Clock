@@ -67,7 +67,7 @@ void HashAlarm::removeQuadratic(long index, ActivatableClock alarm)
 	id--;
 }
 
-HashAlarm::Unit HashAlarm::getElementIterator(int index)
+HashAlarm::Unit& HashAlarm::getElementIterator(int index)
 {
 	//std::cout << index << "Last index \n";
 	return table[index];

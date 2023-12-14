@@ -46,7 +46,7 @@ public:
 	HashAlarm();
 	void insertQuadratic(long index, ActivatableClock &alarm);
 	void removeQuadratic(long index, ActivatableClock alarm);
-	Unit getElementIterator(int index);
+	Unit& getElementIterator(int index);
 	int numberOfAlarms();
 	short getCapacity();
 	

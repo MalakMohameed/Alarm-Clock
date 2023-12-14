@@ -1,10 +1,21 @@
-﻿  ActivatableClock.cpp
-  AlarmClock.cpp
-  HashAlarm.cpp
+﻿  Main.cpp
 D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(15,25): warning C4244: '=': conversion from 'long' to 'short', possible loss of data
-  Main.cpp
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  TimerClock.cpp
-  Generating Code...
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(62,72): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(62,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
   AlarmClock.vcxproj -> D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\AlarmClock.exe

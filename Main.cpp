@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
 #include <thread>
 
 
@@ -22,25 +23,23 @@ void checkForAlarms(HashAlarm &clocks)
 	while(true) {
 		for (int i = 0; i < clocks.getCapacity(); i++)
 		{
-			if (clocks.getElementIterator(i).clock.getringtoneActive()) std::cout << "Supposed to play but already playing\n" << clocks.getElementIterator(i).clock.getringtoneActive() << '\n';
+			
 			if (clocks.getElementIterator(i).clock.isTimeToRing() && !clocks.getElementIterator(i).clock.getringtoneActive())
 			{
 				
-				std::cout << "--->" << clocks.getElementIterator(i).clock.getringtoneActive() << '\n';
+				
 
 				clocks.getElementIterator(i).clock.activateRingtone();
-				std::cout << i << " Ringing \n";
+			
 				clocks.getElementIterator(i).setisPlaying(true);
-				clocks.getElementIterator(i).clock.setringtoneActive(true);
-				std::cout << "--->" << clocks.getElementIterator(i).clock.getringtoneActive() << '\n';
+				
+				
 
 
 			}
-			else {
-				std::cout << i << "NOT Supposed To Ring\n";
-				//clocks.getElementIterator(i).clock.stopRingtone();
-				std::cout << i << "NOT Ringing\n";
-				//	clocks.getElementIterator(i).clock.setringtoneActive(false);
+			else if(!clocks.getElementIterator(i).clock.isTimeToRing()) {
+				clocks.getElementIterator(i).clock.stopRingtone();
+				
 			}
 		}
 	}
@@ -50,8 +49,46 @@ void checkForAlarms(HashAlarm &clocks)
 int main()
 {
 	HashAlarm ClockStorage;
-	
-	//clockLogicThread.launch();
+
+	sf::RenderWindow mainWin(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "AlarmR");
+	sf::RectangleShape background;
+	sf::Color color; 
+	color.r = 9;
+	color.g = 38;
+	color.b = 53;
+	background.setFillColor(color);
+	background.setSize(sf::Vector2f(mainWin.getSize().x, mainWin.getSize().y));
+
+	while (mainWin.isOpen())
+	{
+		sf::Event mainEventHandle;
+		while (mainWin.pollEvent(mainEventHandle))
+		{
+			if (mainEventHandle.type == sf::Event::Closed)
+			{
+				mainWin.close();
+			}
+		}
+
+
+		//update
+		mainWin.clear();
+		////Draw Functions Go here...
+		mainWin.draw(background);
+		mainWin.display();
+
+	}
+
+
+
+
+
+
+
+
+
+	///////FOLLOWING CODE IS PRE PHASE 1 AND PRE GUI....
+
 	AlarmClock clock;
     TimerClock timer ;
 	
@@ -59,23 +96,16 @@ int main()
 	std::cout << clock.getSystemTime_tm().tm_hour<< ":" << clock.getSystemTime_tm().tm_min << ":" << clock.getSystemTime_tm().tm_sec << std::endl;  ///%12 to convert to 12H instead of 24H
 	
 	clock.setRingtone("./Ringtones/goofy1.ogg");
-	//timer.setRingtone();
+	
 
-	//clock.setAlarmTime(20, 04,0);
-	//clock.setDaysToRing({ 2 });
-
-	//timer.setTimer(00, 00, 05);
 	std::cout << timer.getUserTime_tm().tm_hour << ":" << timer.getUserTime_tm().tm_min << ":" << timer.getUserTime_tm().tm_sec << "\n";
-//	clock.activateRingtone();	
-//	timer.activateRingtone();
 
-	ClockStorage.insertQuadratic(clock.hash(), clock);
-	//hashTable.insertQuadratic(timer.hash(), timer);
+
+	
+	
 	std::cout << ClockStorage.numberOfAlarms() << '\n';
 
 	
-	    //AlarmClock clock;
-		//TimerClock timer;
 		int hours = 0;
 		int min = 0;
 		int sec = 0;
@@ -109,25 +139,17 @@ int main()
 			timer.setTimer(hours, min, sec);
 			break;
 		}
-		//timer.setRingtone();
-
-		//clock.setAlarmTime(22, 20,0);
-		//clock.setDaysToRing({ 6 });
-
-		//timer.setTimer(00, 00, 05);
-		std::cout << timer.getUserTime_tm().tm_hour << ":" << timer.getUserTime_tm().tm_min << ":" << timer.getUserTime_tm().tm_sec << "\n";
-		//clock.activateRingtone();
-		ClockStorage.insertQuadratic(clock.hash()%ClockStorage.getCapacity(), clock);
-		//timer.activateRingtone();
-		 ///While Checing Condition Was Here<----
-		//sf::Thread clockLogicThread(checkForAlarms, ClockStorage);
-		//////std::thread stdClockLogicThread(checkForAlarms, std::ref(ClockStorage));
-		checkForAlarms(ClockStorage);
 		
-		//clockLogicThread.launch();
-		//checkForAlarms(ClockStorage);
-		///////stdClockLogicThread.join();
+		std::cout << timer.getUserTime_tm().tm_hour << ":" << timer.getUserTime_tm().tm_min << ":" << timer.getUserTime_tm().tm_sec << "\n";
+		
+		ClockStorage.insertQuadratic(clock.hash()%ClockStorage.getCapacity(), clock);
 
+
+		sf::Thread clockLogicThread(checkForAlarms, ClockStorage);
+
+		clockLogicThread.launch();
+		
+		
 	}
 
 

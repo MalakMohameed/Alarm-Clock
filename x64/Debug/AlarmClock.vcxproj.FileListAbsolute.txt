@@ -18,3 +18,11 @@ D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\vorbis.dll
 D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\ogg.dll
 D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\vorbisfile.dll
 D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\FLAC.dll
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\sfml-graphics-d-2.dll
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\sfml-window-d-2.dll
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\freetyped.dll
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\zlibd1.dll
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\bz2d.dll
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\libpng16d.dll
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\brotlidec.dll
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\brotlicommon.dll
