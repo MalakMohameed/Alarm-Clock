@@ -10,6 +10,8 @@ private:
 public:
 	//TimerClock();
 	void setTimer(int HH, int MM, int SS);
+	
+	bool isTimeToRing();
 
 };
 

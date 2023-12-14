@@ -13,6 +13,7 @@ protected:
 	sf::SoundBuffer ringtoneBuffer;
 	sf::Sound ringtone;
 	long ClockLabelAsLong();
+	bool isAlarmActive = false;
 	
 
 	
@@ -31,7 +32,8 @@ public:
 	bool isTimeToRing();
 	long hash();
 
-
+	
+	void SetStopAlarmActive();
 	bool ringtoneActive;
 
 	bool getringtoneActive();

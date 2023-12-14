@@ -34,3 +34,26 @@ void TimerClock::setTimer(int HH, int MM, int SS)
 		//setTimer(HH, MM, SS);
 	}
 }
+bool TimerClock::isTimeToRing() 
+{
+
+	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min && getUserTime_tm().tm_sec >= getSystemTime_tm().tm_sec && isAlarmActive)
+	{
+		//if (!ringtoneActive) activateRingtone();
+		//std::cout << "isTimeToRing() returns true\n";
+		return true;
+
+
+	}
+	else if (getUserTime_tm().tm_hour <= getSystemTime_tm().tm_hour && getUserTime_tm().tm_min <= getSystemTime_tm().tm_min && getUserTime_tm().tm_sec >= getSystemTime_tm().tm_sec || !isAlarmActive)
+	{
+
+		//if (ringtoneActive) stopRingtone();
+		//std::cout << "isTimeToRing() returns false\n";
+		return false;
+
+	}
+	return false;
+
+
+}

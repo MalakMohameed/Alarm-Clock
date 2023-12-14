@@ -6,7 +6,7 @@ long ActivatableClock::ClockLabelAsLong()
 	return 1;
 	for (char c : ClockLabel)
 	{
-
+		
 	}
 }
 
