@@ -146,6 +146,7 @@
     <ClCompile Include="ActivatableClock.cpp" />
     <ClCompile Include="AlarmClock.cpp" />
     <ClCompile Include="ClockModule.cpp" />
+    <ClCompile Include="ClockSerializer.cpp" />
     <ClCompile Include="HashAlarm.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="TimerClock.cpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="ActivatableClock.h" />
     <ClInclude Include="AlarmClock.h" />
     <ClInclude Include="ClockModule.h" />
+    <ClInclude Include="ClockSerializer.h" />
     <ClInclude Include="HashAlarm.h" />
     <ClInclude Include="TimerClock.h" />
   </ItemGroup>
