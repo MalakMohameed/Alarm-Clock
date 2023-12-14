@@ -7,14 +7,17 @@
 //	ringtone.setVolume(50);
 //}
 
-void TimerClock::setTimer(int HH, int MM, int SS)
+void TimerClock::setTimer(int HH, int MM, int SS) 
 {
 	userTime_tm.tm_hour = this->getSystemTime_tm().tm_hour + HH;
 	if(this->getSystemTime_tm().tm_min + MM<60)userTime_tm.tm_min = this->getSystemTime_tm().tm_min + MM;
 	else {
 		HH++;
-		MM = 0;
+		int MMrem;
+		MMrem = this->getSystemTime_tm().tm_min + MM;
+		MM = MMrem-60;
 		userTime_tm.tm_hour = this->getSystemTime_tm().tm_hour + HH;
+		userTime_tm.tm_min = MM;
 		std::cout <<"New Time After Mod  " << HH << ":" << MM << ":" << SS << "\n";
 		//setTimer(HH, MM, SS);
 	}
@@ -22,9 +25,11 @@ void TimerClock::setTimer(int HH, int MM, int SS)
 	if(this->getSystemTime_tm().tm_sec + SS<60)userTime_tm.tm_sec = this->getSystemTime_tm().tm_sec + SS;
 	else {
 		MM++;
-		SS = 0;
+		int SSrem;
+		SSrem = this->getSystemTime_tm().tm_sec + SS;
+		SS = SSrem-60;
 		userTime_tm.tm_min = this->getSystemTime_tm().tm_min + MM;
-		userTime_tm.tm_sec = 0;
+		userTime_tm.tm_sec = SS;
 		std::cout << "New Time After Mod  " << HH << ":" << MM << ":" << SS << "\n";
 		//setTimer(HH, MM, SS);
 	}
