@@ -10,6 +10,13 @@ long ActivatableClock::ClockLabelAsLong()
 	}
 }
 
+void ActivatableClock:: SetStopAlarmActive()
+{
+	if (this->isAlarmActive) isAlarmActive = false;
+	else
+		isAlarmActive = true;
+}
+
 ActivatableClock::ActivatableClock()
 {
 	userTime_tm.tm_hour = setHours;
