@@ -46,3 +46,6 @@ ipch/
 
 #.vs
 .vs/AlarmClock/v17/ipch/
+/.vs/AlarmClock/v17/Browse.VC.db-shm
+/.vs/AlarmClock/v17/Browse.VC.db-wal
+/x64/Debug/AlarmClock.tlog/unsuccessfulbuild
