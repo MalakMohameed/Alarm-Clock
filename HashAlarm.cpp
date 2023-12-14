@@ -9,7 +9,7 @@ HashAlarm::HashAlarm()
 
 void HashAlarm::insertQuadratic(long index, ActivatableClock &alarm)
 {
-	if (table[index].status == -1 || -2)
+	if (table[index].status == -1 || table[index].status == -2)
 	{
 		table[index].clock = alarm;
 		table[index].status = index;
@@ -17,10 +17,10 @@ void HashAlarm::insertQuadratic(long index, ActivatableClock &alarm)
 	else
 	{
 		short quadSign = 1;
-		while (table[index].status != -1 || -2)
+		while (table[index].status != -1 || table[index].status != -2)
 		{
 			index += (quadSign * quadSign);
-			if (table[index].status == -1 || -2) table[index].clock = alarm;
+			if (table[index].status == -1 || table[index].status == -2) table[index].clock = alarm;
 			else
 			{
 				index -= (quadSign * quadSign);
@@ -28,7 +28,7 @@ void HashAlarm::insertQuadratic(long index, ActivatableClock &alarm)
 				{
 					index += HASH_TABLE_SIZE;
 				}
-				if (table[index].status == -1 || -2) table[index].clock = alarm;
+				if (table[index].status == -1 || table[index].status  == -2) table[index].clock = alarm;
 			}
 			quadSign++;
 		}
@@ -47,7 +47,7 @@ void HashAlarm::removeQuadratic(long index, ActivatableClock alarm)
 	else
 	{
 		short quadSign = 1;
-		while (table[index].status != -1 || -2)
+		while (table[index].status != -1 || table[index].status != -2)
 		{
 			index += (quadSign * quadSign);
 			if (table[index].clock.hash() == alarm.hash()) table[index].status = -2;
@@ -82,6 +82,18 @@ int HashAlarm::numberOfAlarms()
 short HashAlarm::getCapacity()
 {
 	return HASH_TABLE_SIZE;
+}
+
+void HashAlarm::toJSON(nlohmann::json& jsonObj)
+{
+	jsonObj = nlohmann::json{ {"Table", table} };
+}
+
+void HashAlarm::fromJSON(nlohmann::json& jsonObj)
+{
+	for (size_t i = 0; i < HASH_TABLE_SIZE; ++i) {
+		jsonObj.at("Table").at(i).get_to(table[i]);
+	}
 }
 
 

@@ -1,4 +1,32 @@
-﻿  TimerClock.cpp
-  AlarmClock.vcxproj -> C:\Users\noor amgad\OneDrive\Desktop\Alarm-Clock-Project-\x64\Debug\AlarmClock.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+﻿  ActivatableClock.cpp
+  AlarmClock.cpp
+  ClockModule.cpp
+  ClockSerializer.cpp
+  HashAlarm.cpp
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(15,25): warning C4244: '=': conversion from 'long' to 'short', possible loss of data
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(95,28): error C2672: 'nlohmann::json_abi_v3_11_2::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,std::allocator,nlohmann::json_abi_v3_11_2::adl_serializer,std::vector<uint8_t,std::allocator<sf::Uint8>>>::get_to': no matching overloaded function found
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(95,28): error C2783: 'ValueType &nlohmann::json_abi_v3_11_2::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,std::allocator,nlohmann::json_abi_v3_11_2::adl_serializer,std::vector<uint8_t,std::allocator<sf::Uint8>>>::get_to(ValueType &) noexcept(<expr>) const': could not deduce template argument for '__formal'
+D:\Programming\vcpkg\vcpkg\installed\x64-windows\include\nlohmann\json.hpp(1785): message : see declaration of 'nlohmann::json_abi_v3_11_2::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,std::allocator,nlohmann::json_abi_v3_11_2::adl_serializer,std::vector<uint8_t,std::allocator<sf::Uint8>>>::get_to'
+  Main.cpp
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(60,72): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(60,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  TimerClock.cpp
+  Generating Code...

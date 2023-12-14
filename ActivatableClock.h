@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Audio.hpp>
+#include <nlohmann/json.hpp>
 
 #include "ClockModule.h"
 
@@ -38,6 +39,8 @@ public:
 
 	bool getringtoneActive();
 	void setringtoneActive(bool flagValue);
+
+	
 
 
 	

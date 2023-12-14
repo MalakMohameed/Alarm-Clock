@@ -50,5 +50,7 @@ public:
 	int numberOfAlarms();
 	short getCapacity();
 	
+	void toJSON(nlohmann::json& jsonObj);
+	void fromJSON(nlohmann::json& jsonObj);
 
 };
