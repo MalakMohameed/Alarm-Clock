@@ -130,5 +130,14 @@ void ActivatableClock::setringtoneActive(bool flagValue)
 	std::cout << "RingtoneActive Value: " << ringtoneActive << '\n';
 }
 
+void ActivatableClock::fromJSON(nlohmann::json& jsonObj)
+{
+	jsonObj = nlohmann::json{ {"AlarmHH", userTime_tm.tm_hour}, {"AlarmMM", userTime_tm.tm_min}, {"AlarmSS", userTime_tm.tm_sec}, {"ClockLabel", ClockLabel} } //// Still Doesn't Contain Sound!!
+}
+
+void ActivatableClock::toJSON(nlohmann::json& jsonObj)
+{
+}
+
 
 
