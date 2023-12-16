@@ -32,6 +32,9 @@ private:
 			status = k;
 			clock = loadedClock;
 		}
+		void to_json(nlohmann::json& jsonObj);
+		void from_json(nlohmann::json& jsonObj);
+
 		
 	};
 
@@ -50,7 +53,7 @@ public:
 	int numberOfAlarms();
 	short getCapacity();
 	
-	void toJSON(nlohmann::json& jsonObj);
-	void fromJSON(nlohmann::json& jsonObj);
+	void to_json(nlohmann::json& jsonObj);
+	void from_json(nlohmann::json& jsonObj);
 
 };

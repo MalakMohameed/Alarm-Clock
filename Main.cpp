@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
 #include <thread>
 
 
@@ -53,11 +54,14 @@ int main()
 	sf::RenderWindow mainWin(sf::VideoMode(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height), "AlarmR");
 	sf::RectangleShape background;
 	sf::Color color; 
+	tgui::Gui gui{ mainWin };
 	color.r = 9;
 	color.g = 38;
 	color.b = 53;
 	background.setFillColor(color);
 	background.setSize(sf::Vector2f(mainWin.getSize().x, mainWin.getSize().y));
+	tgui::Button::Ptr Button = tgui::Button::create();
+	gui.add(Button);
 
 	while (mainWin.isOpen())
 	{
@@ -68,6 +72,7 @@ int main()
 			{
 				mainWin.close();
 			}
+			gui.handleEvent(mainEventHandle);
 		}
 
 
@@ -75,6 +80,7 @@ int main()
 		mainWin.clear();
 		////Draw Functions Go here...
 		mainWin.draw(background);
+		gui.draw();
 		mainWin.display();
 
 	}

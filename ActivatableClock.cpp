@@ -26,6 +26,8 @@ ActivatableClock::ActivatableClock()
 	
 }
 
+
+
 ActivatableClock::ActivatableClock(ActivatableClock& copyClock)
 {
 	this->setHours = copyClock.setHours;
@@ -36,6 +38,14 @@ ActivatableClock::ActivatableClock(ActivatableClock& copyClock)
 	this->ringtoneBuffer = copyClock.ringtoneBuffer;
 	this->ringtone = copyClock.ringtone;
 	this->ringtoneActive = copyClock.ringtoneActive;
+}
+
+ActivatableClock::ActivatableClock(string Label, int hours, int min, int sec)
+{
+	ClockLabel = Label;
+	userTime_tm.tm_hour = hours;
+	userTime_tm.tm_min = min;
+	userTime_tm.tm_sec = sec;
 }
 
 void ActivatableClock::setRingtone(std::string ringtonePath)
@@ -130,13 +140,24 @@ void ActivatableClock::setringtoneActive(bool flagValue)
 	std::cout << "RingtoneActive Value: " << ringtoneActive << '\n';
 }
 
-void ActivatableClock::fromJSON(nlohmann::json& jsonObj)
+
+
+nlohmann::json ActivatableClock::to_json()
 {
-	jsonObj = nlohmann::json{ {"AlarmHH", userTime_tm.tm_hour}, {"AlarmMM", userTime_tm.tm_min}, {"AlarmSS", userTime_tm.tm_sec}, {"ClockLabel", ClockLabel} } //// Still Doesn't Contain Sound!!
+	 return { {"AlarmHH", userTime_tm.tm_hour}, {"AlarmMM", userTime_tm.tm_min}, {"AlarmSS", userTime_tm.tm_sec}, {"ClockLabel", ClockLabel} }; //// Still Doesn't Contain Sound!!
+	///Still Doesn't Contain Days to Ring//////Needs Overloading in AlarmClock class!!:3
+
 }
 
-void ActivatableClock::toJSON(nlohmann::json& jsonObj)
+
+void ActivatableClock::from_json(nlohmann::json& jsonObj)
 {
+	jsonObj.at("AlarmHH").get_to(userTime_tm.tm_hour);
+	jsonObj.at("AlarmMM").get_to(userTime_tm.tm_min);
+	jsonObj.at("AlarmSS").get_to(userTime_tm.tm_sec);
+	jsonObj.at("ClockLabel").get_to(ClockLabel);
+
+	
 }
 
 

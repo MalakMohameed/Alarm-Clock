@@ -84,15 +84,17 @@ short HashAlarm::getCapacity()
 	return HASH_TABLE_SIZE;
 }
 
-void HashAlarm::toJSON(nlohmann::json& jsonObj)
+void HashAlarm::to_json(nlohmann::json& jsonObj)
 {
 	jsonObj = nlohmann::json{ {"Table", table} };
 }
 
-void HashAlarm::fromJSON(nlohmann::json& jsonObj)
+void HashAlarm::from_json(nlohmann::json& jsonObj)
 {
 	for (size_t i = 0; i < HASH_TABLE_SIZE; ++i) {
-		jsonObj.at("Table").at(i).get_to(table[i]);
+		
+		nlohmann::json jsonUnit = jsonObj.at("Table").at(i);
+		this->table[i] = Unit::from_json(jsonUnit);
 	}
 }
 
@@ -100,4 +102,15 @@ void HashAlarm::fromJSON(nlohmann::json& jsonObj)
 
 HashAlarm::Unit::Unit()
 {
+}
+
+void HashAlarm::Unit::to_json(nlohmann::json& jsonObj)
+{
+	jsonObj = nlohmann::json{ {"Status", this->status}, {"Clock", clock.to_json()}};
+}
+void HashAlarm::Unit::from_json(nlohmann::json& jsonObj)
+{
+	return ActivatableClock(nlohmann::json{"ClockLabel"},nlohmann::json{"AlarmHH"}, nlohmann::json{"AlarmMM"}, nlohmann::json{"AlarmSS"});
+	jsonObj.at("Status").get_to(status);
+	jsonObj.at("Clock").get_to(clock);
 }

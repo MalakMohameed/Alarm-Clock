@@ -5,12 +5,15 @@
   HashAlarm.cpp
 D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(15,25): warning C4244: '=': conversion from 'long' to 'short', possible loss of data
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(95,28): error C2672: 'nlohmann::json_abi_v3_11_2::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,std::allocator,nlohmann::json_abi_v3_11_2::adl_serializer,std::vector<uint8_t,std::allocator<sf::Uint8>>>::get_to': no matching overloaded function found
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(95,28): error C2783: 'ValueType &nlohmann::json_abi_v3_11_2::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,std::allocator,nlohmann::json_abi_v3_11_2::adl_serializer,std::vector<uint8_t,std::allocator<sf::Uint8>>>::get_to(ValueType &) noexcept(<expr>) const': could not deduce template argument for '__formal'
-D:\Programming\vcpkg\vcpkg\installed\x64-windows\include\nlohmann\json.hpp(1785): message : see declaration of 'nlohmann::json_abi_v3_11_2::basic_json<std::map,std::vector,std::string,bool,int64_t,uint64_t,double,std::allocator,nlohmann::json_abi_v3_11_2::adl_serializer,std::vector<uint8_t,std::allocator<sf::Uint8>>>::get_to'
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(109,70): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'nlohmann::json_abi_v3_11_2::json'
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(109,70): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(113,30): error C2597: illegal reference to non-static member 'HashAlarm::Unit::status'
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(18): message : see declaration of 'HashAlarm::Unit::status'
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(114,29): error C2597: illegal reference to non-static member 'HashAlarm::Unit::clock'
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(19): message : see declaration of 'HashAlarm::Unit::clock'
   Main.cpp
 D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(60,72): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(62,72): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -19,7 +22,7 @@ D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(60,72): warning C4244:
           [
               T=float
           ]
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(60,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(62,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int

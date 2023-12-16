@@ -23,6 +23,7 @@ protected:
 public:
 	ActivatableClock();
 	ActivatableClock(ActivatableClock &copyClock);
+	ActivatableClock(string Label, int hours, int min, int sec);
 	void setRingtone(std::string ringtonePath);
 	void activateRingtone();
 	void stopRingtone();
@@ -39,6 +40,12 @@ public:
 
 	bool getringtoneActive();
 	void setringtoneActive(bool flagValue);
+
+
+
+
+	nlohmann::json to_json();
+	void from_json(nlohmann::json& jsonObj);
 
 	
 
