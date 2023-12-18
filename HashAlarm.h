@@ -1,7 +1,8 @@
 #pragma once
 
 
-#include "ActivatableClock.h";
+#include "ActivatableClock.h"
+#include "ClockModule.h"
 #include <atomic>
 
 const short HASH_TABLE_SIZE = 41;
@@ -32,8 +33,9 @@ private:
 			status = k;
 			clock = loadedClock;
 		}
-		void to_json(nlohmann::json& jsonObj);
-		void from_json(nlohmann::json& jsonObj);
+		
+		void to_json(nlohmann::json& jsonObj, const Unit& unit);
+		void from_json(const nlohmann::json& jsonObj, Unit& unit);
 
 		
 	};
@@ -53,7 +55,6 @@ public:
 	int numberOfAlarms();
 	short getCapacity();
 	
-	void to_json(nlohmann::json& jsonObj);
-	void from_json(nlohmann::json& jsonObj);
+	
 
 };

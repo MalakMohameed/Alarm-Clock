@@ -17,6 +17,26 @@ void ActivatableClock:: SetStopAlarmActive()
 		isAlarmActive = true;
 }
 
+	void ActivatableClock::to_json(nlohmann::json& jsonObj, const ActivatableClock& clock)
+	{
+		jsonObj = nlohmann::json{ {"clocklabel", ClockLabel}, {"isAlarmActive", isAlarmActive}, {"ringHH",userTime_tm.tm_hour}, {"ringMM", userTime_tm.tm_min} }; /////Add ringtone 
+	}
+
+	void ActivatableClock::from_json(const nlohmann::json& jsonObj,  ActivatableClock& clock)
+	{
+		jsonObj.at("clocklabel").get_to(clock.ClockLabel);
+		jsonObj.at("isAlarmActive").get_to(clock.isAlarmActive);
+		jsonObj.at("ringHH").get_to(clock.userTime_tm.tm_hour);
+		jsonObj.at("ringMM").get_to(clock.userTime_tm.tm_min);
+	
+
+	}
+
+	nlohmann::json ActivatableClock::to_json(const ActivatableClock& clock)
+	{
+		return nlohmann::json{ {"clocklabel", clock.ClockLabel}, {"isAlarmActive", clock.isAlarmActive}, {"ringHH",clock.userTime_tm.tm_hour}, {"ringMM", clock.userTime_tm.tm_min} }; /////Add ringtone
+	}
+
 ActivatableClock::ActivatableClock()
 {
 	userTime_tm.tm_hour = setHours;
@@ -28,7 +48,7 @@ ActivatableClock::ActivatableClock()
 
 
 
-ActivatableClock::ActivatableClock(ActivatableClock& copyClock)
+ActivatableClock::ActivatableClock(const ActivatableClock& copyClock)
 {
 	this->setHours = copyClock.setHours;
 	this->setMinutes = copyClock.setMinutes;
@@ -142,23 +162,7 @@ void ActivatableClock::setringtoneActive(bool flagValue)
 
 
 
-nlohmann::json ActivatableClock::to_json()
-{
-	 return { {"AlarmHH", userTime_tm.tm_hour}, {"AlarmMM", userTime_tm.tm_min}, {"AlarmSS", userTime_tm.tm_sec}, {"ClockLabel", ClockLabel} }; //// Still Doesn't Contain Sound!!
-	///Still Doesn't Contain Days to Ring//////Needs Overloading in AlarmClock class!!:3
 
-}
-
-
-void ActivatableClock::from_json(nlohmann::json& jsonObj)
-{
-	jsonObj.at("AlarmHH").get_to(userTime_tm.tm_hour);
-	jsonObj.at("AlarmMM").get_to(userTime_tm.tm_min);
-	jsonObj.at("AlarmSS").get_to(userTime_tm.tm_sec);
-	jsonObj.at("ClockLabel").get_to(ClockLabel);
-
-	
-}
 
 
 
