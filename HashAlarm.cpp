@@ -7,7 +7,8 @@ HashAlarm::HashAlarm()
 	std::cout << "HashMap Creater\n";
 }
 
-void HashAlarm::insertQuadratic(long index, ActivatableClock &alarm)
+
+void HashAlarm::insertQuadratic(long index, AlarmClock &alarm)
 {
 	if (table[index].status == -1 || table[index].status == -2)
 	{
@@ -17,10 +18,10 @@ void HashAlarm::insertQuadratic(long index, ActivatableClock &alarm)
 	else
 	{
 		short quadSign = 1;
-		while (table[index].status != -1 || table[index].status != -2)
+		while (table[index].status != -1 && table[index].status != -2)
 		{
 			index += (quadSign * quadSign);
-			if (table[index].status == -1 || table[index].status == -2) table[index].clock = alarm;
+			if (table[index].status == -1 && table[index].status == -2) table[index].clock = alarm;
 			else
 			{
 				index -= (quadSign * quadSign);
@@ -37,7 +38,7 @@ void HashAlarm::insertQuadratic(long index, ActivatableClock &alarm)
 	id++;
 }
 
-void HashAlarm::removeQuadratic(long index, ActivatableClock alarm)
+void HashAlarm::removeQuadratic(long index, AlarmClock alarm)
 {
 	if (table[index].clock.hash() == alarm.hash())
 	{
@@ -47,7 +48,7 @@ void HashAlarm::removeQuadratic(long index, ActivatableClock alarm)
 	else
 	{
 		short quadSign = 1;
-		while (table[index].status != -1 || table[index].status != -2)
+		while (table[index].status != -1 && table[index].status != -2)
 		{
 			index += (quadSign * quadSign);
 			if (table[index].clock.hash() == alarm.hash()) table[index].status = -2;
@@ -84,6 +85,29 @@ short HashAlarm::getCapacity()
 	return HASH_TABLE_SIZE;
 }
 
+nlohmann::json HashAlarm::to_json(const Unit objectContainer[])
+{
+	nlohmann::json jsonObj;
+	for (int i = 0; i < HASH_TABLE_SIZE; i++)
+	{
+		if (objectContainer[i].status != -1 && objectContainer[i].status != -2)
+		{
+			jsonObj += Unit::to_json(objectContainer[i]);
+		}
+	}
+	return jsonObj;
+	
+}
+
+void HashAlarm::from_json(const nlohmann::json& jsonObj)
+{
+	for (const auto& j : jsonObj)
+	{
+		Unit insUnit = Unit::from_json(j);
+		HashAlarm::insertQuadratic(insUnit.clock.hash() % HASH_TABLE_SIZE, insUnit.clock);
+	}
+}
+
 
 
 
@@ -102,6 +126,26 @@ void HashAlarm::Unit::to_json(nlohmann::json& jsonObj, const Unit& unit)
 
 void HashAlarm::Unit::from_json(const nlohmann::json& jsonObj, Unit& unit)
 {
+	jsonObj.at("status").get_to(unit.status);
+	unit.clock = AlarmClock::from_json(jsonObj);
+
+}
+
+nlohmann::json HashAlarm::Unit::to_json(const Unit& unit)
+{
+
+	AlarmClock unitClock = unit.clock;
+	nlohmann::json unitClockJSON = AlarmClock::to_json(unitClock);
+
+	return  nlohmann::json{ {"status", unit.status}, {"Clock", unitClockJSON} };
+}
+
+HashAlarm::Unit HashAlarm::Unit::from_json(const nlohmann::json& jsonObj)
+{
+	Unit retUnit;
+	jsonObj.at("status").get_to(retUnit.status);
+	retUnit.clock = AlarmClock::from_json(jsonObj);
+	return retUnit;
 }
 
 

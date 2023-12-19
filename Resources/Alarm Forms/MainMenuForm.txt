@@ -1,0 +1,49 @@
+Renderer.1 {
+    BackgroundColor = #F5F5F5;
+    BackgroundColorDisabled = #E6E6E6;
+    BackgroundColorDown = #EBEBEB;
+    BackgroundColorHover = white;
+    BorderColor = #3C3C3C;
+    BorderColorDisabled = #7D7D7D;
+    BorderColorDown = black;
+    BorderColorFocused = #1E1EB4;
+    BorderColorHover = black;
+    Borders = (1, 1, 1, 1);
+    RoundedBorderRadius = 5;
+    TextColor = #3C3C3C;
+    TextColorDisabled = #7D7D7D;
+    TextColorDown = black;
+    TextColorHover = black;
+    Texture = None;
+    TextureDisabled = None;
+    TextureDown = None;
+    TextureDownFocused = None;
+    TextureDownHover = None;
+    TextureFocused = None;
+    TextureHover = None;
+}
+
+Picture.Picture1 {
+    Size = (550, 898);
+
+    Renderer {
+        Texture = "D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Resources\Alarm Forms\MainMenu.png" Smooth;
+        TransparentTexture = false;
+    }
+}
+
+Button.btn_alarm {
+    Position = (150, 234.333);
+    Renderer = &1;
+    Size = (240, 68);
+    Text = Alarm;
+    TextSize = 13;
+}
+
+Button.btn_timer {
+    Position = (150, 414.333);
+    Renderer = &1;
+    Size = (240, 68);
+    Text = "Add Timer";
+    TextSize = 13;
+}

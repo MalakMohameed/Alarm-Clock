@@ -1,0 +1,1197 @@
+Renderer.1 {
+    BackgroundColor = transparent;
+    BackgroundColorDisabled = transparent;
+    BackgroundColorDown = #EBEBEB;
+    BackgroundColorHover = white;
+    BorderColor = #3C3C3C;
+    BorderColorDisabled = #7D7D7D;
+    BorderColorDown = black;
+    BorderColorFocused = #1E1EB4;
+    BorderColorHover = transparent;
+    Borders = (0, 0, 0, 0);
+    TextColor = #FBFFFF;
+    TextColorDisabled = #7D7D7D;
+    TextColorDown = black;
+    TextColorHover = black;
+    Texture = None;
+    TextureDisabled = None;
+    TextureDown = None;
+    TextureDownFocused = None;
+    TextureDownHover = None;
+    TextureFocused = None;
+    TextureHover = None;
+}
+
+Renderer.2 {
+}
+
+Renderer.3 {
+    TextColor = rgba(255, 255, 255, 215);
+    TextureBackground = None;
+
+    Scrollbar {
+        ArrowBackgroundColor = rgba(160, 160, 160, 215);
+        ArrowBackgroundColorHover = rgba(170, 170, 170, 215);
+        ArrowColor = rgba(200, 200, 200, 215);
+        ArrowColorHover = rgba(225, 225, 225, 215);
+        ThumbColor = rgba(185, 185, 185, 215);
+        ThumbColorHover = rgba(195, 195, 195, 215);
+        TrackColor = rgba(160, 160, 160, 215);
+        TrackColorHover = rgba(170, 170, 170, 215);
+    }
+}
+
+Renderer.4 {
+    BackgroundColor = #F5F5F5;
+    BackgroundColorDisabled = #E6E6E6;
+    BackgroundColorHover = white;
+    BorderColor = #3C3C3C;
+    BorderColorDisabled = #7D7D7D;
+    BorderColorFocused = #1E1EB4;
+    BorderColorHover = black;
+    Borders = (1, 1, 1, 1);
+    CheckColor = #3C3C3C;
+    CheckColorDisabled = #7D7D7D;
+    CheckColorHover = black;
+    TextColor = #3C3C3C;
+    TextColorDisabled = #7D7D7D;
+    TextColorHover = black;
+    TextDistanceRatio = 0.2;
+    TextureChecked = None;
+    TextureCheckedDisabled = None;
+    TextureCheckedFocused = None;
+    TextureCheckedHover = None;
+    TextureUnchecked = None;
+    TextureUncheckedDisabled = None;
+    TextureUncheckedFocused = None;
+    TextureUncheckedHover = None;
+}
+
+Renderer.5 {
+    BackgroundColor = #E6E6E6;
+    BorderBelowTitleBar = 1;
+    BorderColor = black;
+    Borders = (1, 1, 1, 1);
+    DistanceToSide = 3;
+    PaddingBetweenButtons = 1;
+    ShowTextOnTitleButtons = true;
+    TextureBackground = None;
+    TextureTitleBar = None;
+    TitleBarColor = white;
+    TitleColor = #3C3C3C;
+
+    CloseButton {
+        BackgroundColor = #F5F5F5;
+        BackgroundColorDown = #EBEBEB;
+        BackgroundColorHover = white;
+        BorderColor = #3C3C3C;
+        BorderColorDown = black;
+        BorderColorHover = black;
+        Borders = (1, 1, 1, 1);
+        TextColor = #3C3C3C;
+        TextColorDown = black;
+        TextColorHover = black;
+        Texture = None;
+        TextureDisabled = None;
+        TextureDown = None;
+        TextureDownFocused = None;
+        TextureDownHover = None;
+        TextureFocused = None;
+        TextureHover = None;
+    }
+}
+
+Renderer.6 {
+    BackgroundColor = transparent;
+    BackgroundColorDisabled = transparent;
+    BackgroundColorDown = #EBEBEB;
+    BackgroundColorHover = white;
+    BorderColor = #3C3C3C;
+    BorderColorDisabled = #7D7D7D;
+    BorderColorDown = black;
+    BorderColorFocused = #1E1EB4;
+    BorderColorHover = transparent;
+    Borders = (0, 0, 0, 0);
+    TextColor = #FBFFFF;
+    TextColorDisabled = #7D7D7D;
+    TextColorDown = black;
+    TextColorHover = black;
+    Texture = None;
+    TextureDisabled = None;
+    TextureDown = None;
+    TextureDownFocused = None;
+    TextureDownHover = None;
+    TextureFocused = None;
+    TextureHover = None;
+}
+
+Renderer.7 {
+}
+
+Renderer.8 {
+}
+
+Renderer.9 {
+    BackgroundColor = #F5F5F5;
+    BackgroundColorDisabled = #E6E6E6;
+    BackgroundColorHover = white;
+    BorderColor = #3C3C3C;
+    BorderColorDisabled = #7D7D7D;
+    BorderColorHover = black;
+    Borders = (1, 1, 1, 1);
+    CaretColor = black;
+    CaretWidth = 1;
+    DefaultTextColor = #A0A0A0;
+    Padding = (0, 0, 0, 0);
+    SelectedTextBackgroundColor = #006EFF;
+    SelectedTextColor = white;
+    TextColor = #3C3C3C;
+    TextColorDisabled = #7D7D7D;
+    Texture = None;
+    TextureDisabled = None;
+    TextureFocused = None;
+    TextureHover = None;
+}
+
+Renderer.10 {
+    ArrowColor = #3C3C3C;
+    ArrowColorHover = #B860FF;
+    BackgroundColor = #F5F5F5;
+    BackgroundColorHover = white;
+    BorderBetweenArrows = 2;
+    BorderColor = black;
+    Borders = (1, 1, 1, 1);
+    TextureArrowDown = None;
+    TextureArrowDownHover = None;
+    TextureArrowUp = None;
+    TextureArrowUpHover = None;
+}
+
+Renderer.11 {
+    BackgroundColor = #F5F5F5;
+    BackgroundColorDisabled = #E6E6E6;
+    BackgroundColorHover = white;
+    BorderColor = #3C3C3C;
+    BorderColorDisabled = #7D7D7D;
+    BorderColorFocused = #1E1EB4;
+    BorderColorHover = black;
+    Borders = (1, 1, 1, 1);
+    CheckColor = #3C3C3C;
+    CheckColorDisabled = #7D7D7D;
+    CheckColorHover = black;
+    TextColor = #3C3C3C;
+    TextColorDisabled = #7D7D7D;
+    TextColorHover = black;
+    TextDistanceRatio = 0.2;
+    TextureChecked = None;
+    TextureCheckedDisabled = None;
+    TextureCheckedFocused = None;
+    TextureCheckedHover = None;
+    TextureUnchecked = None;
+    TextureUncheckedDisabled = None;
+    TextureUncheckedFocused = None;
+    TextureUncheckedHover = None;
+}
+
+Renderer.12 {
+    BackgroundColor = #F5F5F5;
+    BackgroundColorDisabled = #E6E6E6;
+    BackgroundColorHover = white;
+    BorderColor = #3C3C3C;
+    BorderColorDisabled = #7D7D7D;
+    BorderColorHover = black;
+    Borders = (1, 1, 1, 1);
+    CaretColor = black;
+    CaretWidth = 1;
+    DefaultTextColor = #A0A0A0;
+    Padding = (0, 0, 0, 0);
+    SelectedTextBackgroundColor = #006EFF;
+    SelectedTextColor = white;
+    TextColor = #3C3C3C;
+    TextColorDisabled = #7D7D7D;
+    Texture = None;
+    TextureDisabled = None;
+    TextureFocused = None;
+    TextureHover = None;
+}
+
+Picture.Picture2 {
+    Position = (0.336411, 0);
+    Size = (550, 898);
+
+    Renderer {
+        Texture = "Alarm_background.png" Smooth;
+        TransparentTexture = false;
+    }
+}
+
+Button.Add_NewAlarm {
+    Position = (420, 117);
+    Renderer = &1;
+    Size = (40, 32);
+    Text = "✚";
+    TextSize = 25;
+}
+
+Group.Obj_Node {
+    Position = (70, 199);
+    Renderer = &2;
+    Size = (410, 160);
+    Visible = false;
+
+    Picture.Picture3 {
+        Size = (407, 160.248);
+
+        Renderer {
+            Texture = "Object_Background.png" Smooth;
+            TransparentTexture = false;
+        }
+    }
+
+    Label.Obj_Label {
+        Position = (30, 30);
+        Renderer = &3;
+        Size = (213.2, 33);
+        Text = "Alarm Label ";
+        TextSize = 17;
+    }
+
+    Label.Obj_Hours {
+        Position = (40, 70);
+        Renderer = &3;
+        Size = (33.2, 23);
+        Text = 00;
+        TextSize = 17;
+    }
+
+    Label.Label14 {
+        Position = (68, 70);
+        Renderer = &3;
+        Size = (13.2, 23);
+        Text = ":";
+        TextSize = 17;
+    }
+
+    Label.Obj_Mins {
+        Position = (80, 70);
+        Renderer = &3;
+        Size = (33.2, 23);
+        Text = 00;
+        TextSize = 17;
+    }
+
+    Button.Edit_Obj {
+        Position = (330, 107);
+        Size = (40, 32);
+        Text = "✍";
+        TextSize = 35;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BackgroundColorDisabled = transparent;
+            BackgroundColorDown = #EBEBEB;
+            BackgroundColorHover = white;
+            BorderColor = #3C3C3C;
+            BorderColorDisabled = #7D7D7D;
+            BorderColorDown = black;
+            BorderColorFocused = #1E1EB4;
+            BorderColorHover = transparent;
+            Borders = (0, 0, 0, 0);
+            TextColor = #F5F6FF;
+            TextColorDisabled = #7D7D7D;
+            TextColorDown = black;
+            TextColorHover = black;
+            Texture = None;
+            TextureDisabled = None;
+            TextureDown = None;
+            TextureDownFocused = None;
+            TextureDownHover = None;
+            TextureFocused = None;
+            TextureHover = None;
+        }
+    }
+
+    CheckBox.Obj_DSU {
+        Position = (40, 120);
+        Renderer = &4;
+        Size = (10, 10);
+        TextSize = 13;
+    }
+
+    Label.Label16 {
+        Position = (52, 116);
+        Renderer = &3;
+        Size = (23.2, 23);
+        Text = S;
+        TextSize = 14;
+    }
+
+    CheckBox.Obj_DM {
+        Position = (80, 120);
+        Renderer = &4;
+        Size = (10, 10);
+        TextSize = 13;
+    }
+
+    Label.Label17 {
+        Position = (92, 116);
+        Renderer = &3;
+        Size = (23.2, 23);
+        Text = M;
+        TextSize = 14;
+    }
+
+    CheckBox.Obj_DTH {
+        Position = (200, 120);
+        Renderer = &4;
+        Size = (10, 10);
+        TextSize = 13;
+    }
+
+    CheckBox.Obj_DW {
+        Position = (160, 120);
+        Renderer = &4;
+        Size = (10, 10);
+        TextSize = 13;
+    }
+
+    CheckBox.Obj_DTU {
+        Position = (120, 120);
+        Renderer = &4;
+        Size = (10, 10);
+        TextSize = 13;
+    }
+
+    Label.Label124 {
+        Position = (132, 116);
+        Renderer = &3;
+        Size = (23.2, 23);
+        Text = T;
+        TextSize = 14;
+    }
+
+    Label.Label18 {
+        Position = (172, 116);
+        Renderer = &3;
+        Size = (23.2, 23);
+        Text = W;
+        TextSize = 14;
+    }
+
+    Label.Label19 {
+        Position = (212, 116);
+        Renderer = &3;
+        Size = (23.2, 23);
+        Text = T;
+        TextSize = 14;
+    }
+
+    CheckBox.Obj_DF {
+        Position = (240, 120);
+        Renderer = &4;
+        Size = (10, 10);
+        TextSize = 13;
+    }
+
+    CheckBox.Obj_DSA {
+        Position = (280, 120);
+        Renderer = &4;
+        Size = (10, 10);
+        TextSize = 13;
+    }
+
+    Label.Label20 {
+        Position = (292, 116);
+        Renderer = &3;
+        Size = (23.2, 23);
+        Text = T;
+        TextSize = 14;
+    }
+
+    Label.Label21 {
+        Position = (252, 116);
+        Renderer = &3;
+        Size = (23.2, 23);
+        Text = F;
+        TextSize = 14;
+    }
+
+    Button.Button1 {
+        Position = (335, 30);
+        Size = (30, 32);
+        Text = X;
+        TextSize = 30;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BackgroundColorDisabled = #E6E6E6;
+            BackgroundColorDown = #EBEBEB;
+            BackgroundColorHover = white;
+            BorderColor = #3C3C3C;
+            BorderColorDisabled = #7D7D7D;
+            BorderColorDown = black;
+            BorderColorFocused = #1E1EB4;
+            BorderColorHover = black;
+            Borders = (0, 0, 0, 0);
+            TextColor = #FF000D;
+            TextColorDisabled = #7D7D7D;
+            TextColorDown = black;
+            TextColorHover = black;
+            Texture = None;
+            TextureDisabled = None;
+            TextureDown = None;
+            TextureDownFocused = None;
+            TextureDownHover = None;
+            TextureFocused = None;
+            TextureHover = None;
+        }
+    }
+
+    Label.PM_AM {
+        Position = (110, 70);
+        Renderer = &3;
+        Size = (33.2, 23);
+        Text = AP;
+        TextSize = 17;
+    }
+}
+
+ChildWindow.Ringing {
+    Position = (80, 400);
+    Renderer = &5;
+    Size = (399, 160);
+    TitleAlignment = Center;
+    TitleButtons = Close;
+    TitleTextSize = 13;
+    Visible = false;
+
+    Picture.Picture4 {
+        Position = (0, -9.2383);
+        Size = (397, 147.496);
+
+        Renderer {
+            Texture = "Object_Background.png" Smooth;
+            TransparentTexture = false;
+        }
+    }
+
+    Button.Ringing_Stop {
+        Position = (60, 87);
+        Renderer = &6;
+        Size = (70, 32);
+        Text = Stop;
+        TextSize = 20;
+    }
+
+    Button.Ringing_Snooze {
+        Position = (240, 87);
+        Renderer = &6;
+        Size = (90, 32);
+        Text = Snooze;
+        TextSize = 20;
+    }
+
+    Button.Ringing_Label {
+        Position = (40, 27);
+        Renderer = &6;
+        Size = (320, 32);
+        Text = "Alarm Label";
+        TextSize = 20;
+    }
+}
+
+ChildWindow.Edit_Alarm {
+    Position = (80, 200);
+    Renderer = &5;
+    Size = (400, 650);
+    TitleAlignment = Center;
+    TitleButtons = None;
+    TitleTextSize = 13;
+    Visible = false;
+
+    Picture.Picture5 {
+        Size = (392.64, 628);
+
+        Renderer {
+            Texture = "Childwindow_background.png" Smooth;
+            TransparentTexture = false;
+        }
+    }
+
+    Label.Label13 {
+        Position = (64, 37.429);
+        Renderer = &3;
+        Size = (207.2, 32.0388);
+        Text = "Set your alarm time:";
+        TextSize = 17;
+    }
+
+    SpinControl.Edit_AlarmHours {
+        DecimalPlaces = 0;
+        Position = (90, 80);
+        Renderer = &7;
+        Size = (50, 42);
+
+        Group {
+            Renderer = &8;
+            Size = (50, 42);
+
+            EditBox.SpinText {
+                InputValidator = Float;
+                Renderer = &9;
+                Size = (29, 42);
+                Text = 0;
+                TextSize = 13;
+            }
+
+            SpinButton.SpinButton {
+                Maximum = 12;
+                Minimum = 0;
+                Position = (SpinText.left + SpinText.width, SpinText.top);
+                Renderer = &10;
+                Size = (21, 42);
+                Step = 1;
+                Value = 0;
+            }
+        }
+    }
+
+    SpinControl.Edit_AlarmMinutes {
+        DecimalPlaces = 0;
+        MouseCursor = Text;
+        Position = (180, 80);
+        Renderer = &7;
+        Size = (50, 42);
+
+        Group {
+            Renderer = &8;
+            Size = (50, 42);
+
+            EditBox.SpinText {
+                InputValidator = Float;
+                Renderer = &9;
+                Size = (29, 42);
+                Text = 0;
+                TextSize = 13;
+            }
+
+            SpinButton.SpinButton {
+                Maximum = 59;
+                Minimum = 0;
+                Position = (SpinText.left + SpinText.width, SpinText.top);
+                Renderer = &10;
+                Size = (21, 42);
+                Step = 1;
+                Value = 0;
+            }
+        }
+    }
+
+    RadioButton.Edit_AlarmAm {
+        Position = (260, 70);
+        Renderer = &11;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    RadioButton.Edit_AlarmPm {
+        Position = (260, 100);
+        Renderer = &11;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label15 {
+        Position = (284, 70);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = AM;
+        TextSize = 14;
+    }
+
+    Label.Label22 {
+        Position = (284, 100);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = PM;
+        TextSize = 14;
+    }
+
+    Label.Label23 {
+        Position = (74, 187.429);
+        Renderer = &3;
+        Size = (207.2, 32.0388);
+        Text = "Set your alarm name:";
+        TextSize = 17;
+    }
+
+    EditBox.Edit_AlarmLabel {
+        DefaultText = "Enter Alarm Name";
+        Position = (90, 230);
+        Renderer = &12;
+        Size = (200, 22);
+        TextSize = 13;
+    }
+
+    CheckBox.Edit_AlarmDaySun {
+        Position = (60, 330);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label24 {
+        Position = (84, 330);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Sun;
+        TextSize = 14;
+    }
+
+    CheckBox.Edit_AlarmDayWen {
+        Position = (60, 370);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label25 {
+        Position = (84, 370);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Wen;
+        TextSize = 14;
+    }
+
+    CheckBox.Edit_AlarmDaySat {
+        Position = (60, 410);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label26 {
+        Position = (84, 410);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Sat;
+        TextSize = 14;
+    }
+
+    CheckBox.Edit_AlarmDayMon {
+        Position = (150, 330);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label27 {
+        Position = (174, 330);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Mon;
+        TextSize = 14;
+    }
+
+    CheckBox.Edit_AlarmDayThu {
+        Position = (150, 370);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label28 {
+        Position = (174, 370);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Thu;
+        TextSize = 14;
+    }
+
+    CheckBox.Edit_AlarmDayTue {
+        Position = (250, 330);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label29 {
+        Position = (274, 330);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Tue;
+        TextSize = 14;
+    }
+
+    CheckBox.Edit_AlarmDayFri {
+        Position = (250, 370);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label30 {
+        Position = (274, 370);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Fri;
+        TextSize = 14;
+    }
+
+    Label.Label31 {
+        Position = (64, 497.429);
+        Renderer = &3;
+        Size = (207.2, 32.0388);
+        Text = "Set your alarm sound:";
+        TextSize = 17;
+    }
+
+    ComboBox.Edit_AlarmSound {
+        ChangeItemOnScroll = false;
+        Items = [ringtone1, "Iphone ringtone", Goofy_ah_easterEgg];
+        ItemsToDisplay = 0;
+        MaximumItems = 0;
+        Position = (110, 530);
+        Size = (160, 22);
+        TextSize = 13;
+
+        Renderer {
+            ArrowBackgroundColor = #F5F5F5;
+            ArrowBackgroundColorHover = white;
+            ArrowColor = #3C3C3C;
+            ArrowColorHover = black;
+            BackgroundColor = #F5F5F5;
+            BorderColor = black;
+            Borders = (1, 1, 1, 1);
+            Padding = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureArrow = None;
+            TextureArrowDisabled = None;
+            TextureArrowHover = None;
+            TextureBackground = None;
+            TextureBackgroundDisabled = None;
+
+            ListBox {
+                BackgroundColor = #F5F5F5;
+                BackgroundColorHover = white;
+                BorderColor = black;
+                Borders = (1, 1, 1, 1);
+                Padding = (0, 0, 0, 0);
+                SelectedBackgroundColor = #006EFF;
+                SelectedBackgroundColorHover = #1E96FF;
+                SelectedTextColor = white;
+                TextColor = #3C3C3C;
+                TextColorHover = black;
+                TextureBackground = None;
+
+                Scrollbar {
+                    ArrowBackgroundColor = #F5F5F5;
+                    ArrowBackgroundColorHover = white;
+                    ArrowColor = #3C3C3C;
+                    ArrowColorHover = black;
+                    TextureArrowDown = None;
+                    TextureArrowDownHover = None;
+                    TextureArrowUp = None;
+                    TextureArrowUpHover = None;
+                    TextureThumb = None;
+                    TextureThumbHover = None;
+                    TextureTrack = None;
+                    TextureTrackHover = None;
+                    ThumbColor = #DCDCDC;
+                    ThumbColorHover = #E6E6E6;
+                    TrackColor = #F5F5F5;
+                }
+            }
+        }
+    }
+
+    Button.Cancel_Edit {
+        Position = (220, 570.6);
+        Size = (80, 28);
+        Text = Cancel;
+        TextSize = 20;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BackgroundColorDisabled = transparent;
+            BackgroundColorDown = #EBEBEB;
+            BackgroundColorHover = white;
+            BorderColor = #3C3C3C;
+            BorderColorDisabled = #7D7D7D;
+            BorderColorDown = black;
+            BorderColorFocused = #1E1EB4;
+            BorderColorHover = transparent;
+            Borders = (0, 0, 0, 0);
+            TextColor = #FBFFFF;
+            TextColorDisabled = #7D7D7D;
+            TextColorDown = black;
+            TextColorHover = black;
+            Texture = None;
+            TextureDisabled = None;
+            TextureDown = None;
+            TextureDownFocused = None;
+            TextureDownHover = None;
+            TextureFocused = None;
+            TextureHover = None;
+        }
+    }
+
+    Button.Save_Edit {
+        Position = (90, 570);
+        Size = (58, 28);
+        Text = Edit;
+        TextSize = 20;
+
+        Renderer {
+            BackgroundColor = transparent;
+            BackgroundColorDisabled = transparent;
+            BackgroundColorDown = #EBEBEB;
+            BackgroundColorHover = white;
+            BorderColor = #3C3C3C;
+            BorderColorDisabled = #7D7D7D;
+            BorderColorDown = black;
+            BorderColorFocused = #1E1EB4;
+            BorderColorHover = transparent;
+            Borders = (0, 0, 0, 0);
+            TextColor = #FBFFFF;
+            TextColorDown = rgba(255, 255, 255, 235);
+            TextColorHover = rgba(255, 255, 255, 235);
+            TextStyleDisabled = Regular;
+            Texture = None;
+            TextureDisabled = None;
+            TextureDown = None;
+            TextureDownFocused = None;
+            TextureDownHover = None;
+            TextureFocused = None;
+            TextureHover = None;
+        }
+    }
+}
+
+ChildWindow.Set_Alarm {
+    Position = (80, 190);
+    Renderer = &5;
+    Size = (400, 650);
+    TitleAlignment = Center;
+    TitleButtons = None;
+    TitleTextSize = 13;
+    Visible = false;
+
+    Picture.Picture1 {
+        Position = (3.15247, 0);
+        Size = (392.64, 628);
+
+        Renderer {
+            Texture = "Childwindow_background.png" Smooth;
+            TransparentTexture = false;
+        }
+    }
+
+    CheckBox.Set_AlarmDaySat {
+        Position = (60, 410);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    CheckBox.Set_AlarmDayFri {
+        Position = (250, 370);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    CheckBox.Set_AlarmDayTue {
+        Position = (250, 330);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    CheckBox.Set_AlarmDayMon {
+        Position = (150, 330);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    CheckBox.Set_AlarmDayThu {
+        Position = (150, 370);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    CheckBox.Set_AlarmDayWen {
+        Position = (60, 370);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    CheckBox.Set_AlarmDaySun {
+        Position = (60, 330);
+        Renderer = &4;
+        Size = (18, 18);
+        TextSize = 13;
+    }
+
+    Label.Label1 {
+        Position = (84, 330);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Sun;
+        TextSize = 14;
+    }
+
+    Label.Label2 {
+        Position = (174, 330);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Mon;
+        TextSize = 14;
+    }
+
+    Label.Label3 {
+        Position = (84, 370);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Wen;
+        TextSize = 14;
+    }
+
+    Label.Label4 {
+        Position = (274, 330);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Tue;
+        TextSize = 14;
+    }
+
+    Label.Label5 {
+        Position = (174, 370);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Thu;
+        TextSize = 14;
+    }
+
+    Label.Label6 {
+        Position = (274, 370);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Fri;
+        TextSize = 14;
+    }
+
+    Label.Label7 {
+        Position = (84, 410);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = Sat;
+        TextSize = 14;
+    }
+
+    ComboBox.Set_AlarmSound {
+        ChangeItemOnScroll = false;
+        Items = [ringtone1, "Iphone ringtone", Goofy_ah_easterEgg];
+        ItemsToDisplay = 0;
+        MaximumItems = 0;
+        Position = (110, 530);
+        Size = (160, 22);
+        TextSize = 13;
+
+        Renderer {
+            ArrowBackgroundColor = #F5F5F5;
+            ArrowBackgroundColorHover = white;
+            ArrowColor = #3C3C3C;
+            ArrowColorHover = black;
+            BackgroundColor = #F5F5F5;
+            BorderColor = black;
+            Borders = (1, 1, 1, 1);
+            Padding = (0, 0, 0, 0);
+            TextColor = #3C3C3C;
+            TextureArrow = None;
+            TextureArrowDisabled = None;
+            TextureArrowHover = None;
+            TextureBackground = None;
+            TextureBackgroundDisabled = None;
+
+            ListBox {
+                BackgroundColor = #F5F5F5;
+                BackgroundColorHover = white;
+                BorderColor = black;
+                Borders = (1, 1, 1, 1);
+                Padding = (0, 0, 0, 0);
+                SelectedBackgroundColor = #006EFF;
+                SelectedBackgroundColorHover = #1E96FF;
+                SelectedTextColor = white;
+                TextColor = #3C3C3C;
+                TextColorHover = black;
+                TextureBackground = None;
+
+                Scrollbar {
+                    ArrowBackgroundColor = #F5F5F5;
+                    ArrowBackgroundColorHover = white;
+                    ArrowColor = #3C3C3C;
+                    ArrowColorHover = black;
+                    TextureArrowDown = None;
+                    TextureArrowDownHover = None;
+                    TextureArrowUp = None;
+                    TextureArrowUpHover = None;
+                    TextureThumb = None;
+                    TextureThumbHover = None;
+                    TextureTrack = None;
+                    TextureTrackHover = None;
+                    ThumbColor = #DCDCDC;
+                    ThumbColorHover = #E6E6E6;
+                    TrackColor = #F5F5F5;
+                }
+            }
+        }
+    }
+
+    Label.Label8 {
+        Position = (64, 497.429);
+        Renderer = &3;
+        Size = (207.2, 32.0388);
+        Text = "Set your alarm sound:";
+        TextSize = 17;
+    }
+
+    SpinControl.Set_AlarmMinutes {
+        DecimalPlaces = 0;
+        MouseCursor = Text;
+        Position = (180, 80);
+        Renderer = &7;
+        Size = (50, 42);
+
+        Group {
+            Renderer = &8;
+            Size = (50, 42);
+
+            EditBox.SpinText {
+                InputValidator = Float;
+                Renderer = &9;
+                Size = (29, 42);
+                Text = 0;
+                TextSize = 13;
+            }
+
+            SpinButton.SpinButton {
+                Maximum = 59;
+                Minimum = 0;
+                Position = (SpinText.left + SpinText.width, SpinText.top);
+                Renderer = &10;
+                Size = (21, 42);
+                Step = 1;
+                Value = 0;
+            }
+        }
+    }
+
+    SpinControl.Set_AlarmHours {
+        DecimalPlaces = 0;
+        Position = (90, 80);
+        Renderer = &7;
+        Size = (50, 42);
+
+        Group {
+            Renderer = &8;
+            Size = (50, 42);
+
+            EditBox.SpinText {
+                InputValidator = Float;
+                Renderer = &9;
+                Size = (29, 42);
+                Text = 0;
+                TextSize = 13;
+            }
+
+            SpinButton.SpinButton {
+                Maximum = 12;
+                Minimum = 0;
+                Position = (SpinText.left + SpinText.width, SpinText.top);
+                Renderer = &10;
+                Size = (21, 42);
+                Step = 1;
+                Value = 0;
+            }
+        }
+    }
+
+    Label.Label9 {
+        Position = (64, 37.429);
+        Renderer = &3;
+        Size = (207.2, 32.0388);
+        Text = "Set your alarm time:";
+        TextSize = 17;
+    }
+
+    Button.Save_Alarm {
+        Position = (80, 570.6);
+        Renderer = &1;
+        Size = (60, 32);
+        Text = Save;
+        TextSize = 20;
+    }
+
+    Button.Cancle_Alarm {
+        Position = (220, 570.6);
+        Renderer = &1;
+        Size = (80, 28);
+        Text = Cancel;
+        TextSize = 20;
+    }
+
+    Label.Label10 {
+        Position = (74, 187.429);
+        Renderer = &3;
+        Size = (207.2, 32.0388);
+        Text = "Set your alarm name:";
+        TextSize = 17;
+    }
+
+    EditBox.Set_AlarmLabel {
+        DefaultText = "Enter Alarm Name";
+        Position = (90, 230);
+        Renderer = &12;
+        Size = (200, 22);
+        TextSize = 13;
+    }
+
+    Group.Group1 {
+        Position = (250, 70);
+        Renderer = &2;
+        Size = (20, 50);
+
+        RadioButton.Set_AlarmAm {
+            Renderer = &11;
+            Size = (18, 18);
+            TextSize = 13;
+        }
+
+        RadioButton.Set_AlarmPm {
+            Position = (0, 30);
+            Renderer = &11;
+            Size = (18, 18);
+            TextSize = 13;
+        }
+    }
+
+    Label.Label11 {
+        Position = (274, 70);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = AM;
+        TextSize = 14;
+    }
+
+    Label.Label12 {
+        Position = (274, 100);
+        Renderer = &3;
+        Size = (47.2, 20.3284);
+        Text = PM;
+        TextSize = 14;
+    }
+}

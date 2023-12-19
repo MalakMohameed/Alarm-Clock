@@ -37,6 +37,18 @@ void ActivatableClock:: SetStopAlarmActive()
 		return nlohmann::json{ {"clocklabel", clock.ClockLabel}, {"isAlarmActive", clock.isAlarmActive}, {"ringHH",clock.userTime_tm.tm_hour}, {"ringMM", clock.userTime_tm.tm_min} }; /////Add ringtone
 	}
 
+	ActivatableClock ActivatableClock::from_json(const nlohmann::json& jsonObj)
+	{
+		ActivatableClock actClock;
+
+		jsonObj.at("clocklabel").get_to(actClock.ClockLabel);
+		jsonObj.at("isAlarmActive").get_to(actClock.isAlarmActive);
+		jsonObj.at("ringHH").get_to(actClock.userTime_tm.tm_hour);
+		jsonObj.at("ringMM").get_to(actClock.userTime_tm.tm_min);
+		return actClock;
+		
+	}
+
 ActivatableClock::ActivatableClock()
 {
 	userTime_tm.tm_hour = setHours;
@@ -121,7 +133,7 @@ std::tm ActivatableClock::getUserTime_tm()
 bool ActivatableClock::isTimeToRing() ////OverLoad Function to ignore seconds 
 {
 	
-	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min /*&& getUserTime_tm().tm_sec >= getSystemTime_tm().tm_sec*/)
+	if (getUserTime_tm().tm_hour == getSystemTime_tm().tm_hour && getUserTime_tm().tm_min == getSystemTime_tm().tm_min  /*&& getUserTime_tm().tm_sec >= getSystemTime_tm().tm_sec*/)
 	{
 		//if (!ringtoneActive) activateRingtone();
 		//std::cout << "isTimeToRing() returns true\n";

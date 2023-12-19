@@ -1,0 +1,11 @@
+[
+  {
+    "Clock": {
+      "clocklabel": "a",
+      "isAlarmActive": false,
+      "ringHH": 3,
+      "ringMM": 5
+    },
+    "status": 8
+  }
+]

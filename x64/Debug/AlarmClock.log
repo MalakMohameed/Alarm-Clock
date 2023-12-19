@@ -1,19 +1,5 @@
-﻿  ActivatableClock.cpp
-  AlarmClock.cpp
-  ClockModule.cpp
-  ClockSerializer.cpp
-  HashAlarm.cpp
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(15,25): warning C4244: '=': conversion from 'long' to 'short', possible loss of data
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(109,70): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'nlohmann::json_abi_v3_11_2::json'
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(109,70): message : No constructor could take the source type, or constructor overload resolution was ambiguous
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(113,30): error C2597: illegal reference to non-static member 'HashAlarm::Unit::status'
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(18): message : see declaration of 'HashAlarm::Unit::status'
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.cpp(114,29): error C2597: illegal reference to non-static member 'HashAlarm::Unit::clock'
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(19): message : see declaration of 'HashAlarm::Unit::clock'
-  Main.cpp
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\HashAlarm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(62,72): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+﻿  Main.cpp
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(212,74): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -22,7 +8,7 @@ D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(62,72): warning C4244:
           [
               T=float
           ]
-D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(62,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(212,53): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -31,5 +17,11 @@ D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(62,51): warning C4244:
           [
               T=float
           ]
-  TimerClock.cpp
-  Generating Code...
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(318,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(319,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(202,37): warning C4101: 'choice': unreferenced local variable
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(562): warning C4715: '`main'::`2'::<lambda_2>::operator()': not all control paths return a value
+D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\Main.cpp(507): warning C4715: '`main'::`2'::<lambda_1>::operator()': not all control paths return a value
+  AlarmClock.vcxproj -> D:\Programming\Git Hub\Alarm Clock DS\AlarmClock\x64\Debug\AlarmClock.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

@@ -1,22 +1,29 @@
 #pragma once
 #include "ActivatableClock.h"
 
-#include <vector>
+
 
 class AlarmClock : public ActivatableClock
 {
 private:
 
-	std::vector<int> daysToRing;
+	
+	int* daysToRing = new int[7];
 	
 
 public:
 
 
-	void setDaysToRing(std::vector<int> days);
-	std::vector<int> getDaysToRing();
+	int* getDaysToRing();
+	void setDaysToRing(int arr[]);
 	bool isTodayOnList();
 	bool isTimeToRing();
+
+
+	void to_json(nlohmann::json& jsonObj, const AlarmClock& clock);
+	void from_json(const nlohmann::json& jsonObj, AlarmClock& clock);
+	static nlohmann::json to_json(const AlarmClock& clock);
+	static AlarmClock from_json(const nlohmann::json& jsonObj);
 	
 
 };

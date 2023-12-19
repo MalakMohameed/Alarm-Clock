@@ -5,7 +5,7 @@
 
 #include "ClockModule.h"
 
-class ActivatableClock :public ClockModule
+class ActivatableClock : public ClockModule
 {
 protected: 
 	short setHours, setMinutes, setSeconds;
@@ -46,6 +46,7 @@ public:
 	void to_json(nlohmann::json& jsonObj, const ActivatableClock& clock);
 	void from_json(const nlohmann::json& jsonObj,  ActivatableClock& clock);
 	static nlohmann::json to_json(const ActivatableClock& clock);
+	static ActivatableClock from_json(const nlohmann::json& jsonObj);
 
 	
 
